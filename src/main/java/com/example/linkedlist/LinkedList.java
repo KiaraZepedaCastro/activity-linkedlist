@@ -14,4 +14,6 @@ public interface LinkedList<E> {
     void clear();
 
     boolean contains(E element);
+
+    int size();
 }

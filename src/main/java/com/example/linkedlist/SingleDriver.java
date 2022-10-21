@@ -29,5 +29,16 @@ public class SingleDriver {
         linkedlist.pollLast();
 
         System.out.println(linkedlist);
+
+        System.out.println("Head: " + linkedlist.peekFirst());
+        System.out.println("Tail: " + linkedlist.peekLast());
+
+        System.out.println(linkedlist);
+
+        System.out.println(linkedlist.size());
+
+        linkedlist.clear();
+
+        System.out.println(linkedlist.size());
     }
 }
