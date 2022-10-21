@@ -97,11 +97,32 @@ public class SinglyLinkedList<E> implements LinkedList<E> {
     @Override
     public void clear() {
 
+        Node current = head;
+        while(current.next != null){
+            Node next = current.next;
+            current.next = null;
+            current = next;
+        }
+
+        head = null;
+        tail = null;
+
     }
 
     @Override
     public boolean contains(E element) {
-        return false;
+
+        boolean contains = false;
+        Node current = head;
+        while (current != null){
+            Node next = current.next;
+            if (current.element == element){
+                contains = true;
+                break;
+            }
+            current = next;
+        }
+        return contains;
     }
 
     @Override
